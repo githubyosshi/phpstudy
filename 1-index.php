@@ -18,36 +18,49 @@
 //値が入っていないnullなので空白になる
 // echo "<p>現在の状態は、${myBool}です。</p>";
 
-$myArray = array("Rob","Kirten","Tommy","Ralphie");
-print_r($myArray); //print readable
-echo "<br><br>";
-echo $myArray[1];
-echo "<br><br>";
+// $myArray = array("Rob","Kirten","Tommy","Ralphie");
+// print_r($myArray); //print readable
+// echo "<br><br>";
+// echo $myArray[1];
+// echo "<br><br>";
 
-$anotherArray[0] = "pizza";
-$anotherArray[1] = "chocolate";
-$anotherArray[5] = "coffee";
+// $anotherArray[0] = "pizza";
+// $anotherArray[1] = "chocolate";
+// $anotherArray[5] = "coffee";
 
-print_r($anotherArray);
+// print_r($anotherArray);
 
-echo "<br><br>";
+// echo "<br><br>";
 
-$anotherArray["mayFavorite"] = "ice cream";
+// $anotherArray["mayFavorite"] = "ice cream";
 
-print_r($anotherArray);
-$thirdArray = array("France" => "French",   "USA" => "English",   "Germany" => "German");
+// print_r($anotherArray);
+// $thirdArray = array("France" => "French",   "USA" => "English",   "Germany" => "German");
 
-echo "<br><br>";
-print_r($thirdArray);
+// echo "<br><br>";
+// print_r($thirdArray);
 
 // 個数
-echo "<br><br>";
-echo sizeof($thirdArray);
+// echo "<br><br>";
+// echo sizeof($thirdArray);
 
 // 削除
-unset($thirdArray["France"]);
-echo "<br><br>";
-print_r($thirdArray);
-echo sizeof($thirdArray);
+// unset($thirdArray["France"]);
+// echo "<br><br>";
+// print_r($thirdArray);
+// echo sizeof($thirdArray);
+
+$role = "admin";
+// $role = "guest";
+// $position = "director";
+$position = "manager";
+
+// if($role == "admin"){
+// if($role == "admin" && $position == "director"){
+if($role == "admin" || $position == "director"){
+  echo "<p>管理画面に進んでください。</p>";
+} else {
+    echo "<p>あなたは管理者ではないので、ここから先には進めません。</p>";
+}
 
 ?>
