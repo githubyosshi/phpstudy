@@ -105,16 +105,29 @@
 // http://localhost/phpstudy/1-index.php?name=rob&gender=sam
 // print_r($_GET);
 // echo "こんにちは、".$_GET['name']."さん";
-if($_POST){
-  echo "こんにちは、".$_POST['name']."さん";
-} else {
+// if($_POST){
+//   echo "こんにちは、".$_POST['name']."さん";
+// } else {
+// }
+
+// mail()
+
+// $emailTo = "rob@percival.com";
+$emailTo = "";
+$subject = "コースの修了証について";
+$body = "修了証の出力方法を教えてください";
+$header ="";
+if(mail($emailTo, $subject, $body, $header)){
+  echo "送信に成功しました！";
+}else{
+  echo "送信に失敗しました！";
 }
 
 ?>
 
-<p>お名前を入力してください：</p>
-<!-- <form> -->
+<!-- <p>お名前を入力してください：</p>
+<form>
 <form method="post">
   <input type="text" name="name">
   <input type="submit" value="返信する">
-</form>
+</form> -->
