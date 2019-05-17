@@ -90,16 +90,24 @@
 //   echo $family[$key].",";
 // }
 
-$i = 0;
-while($i < 10){
-  echo $i."<br>";
-  $i++;
-}
-$family = array("Rob","Kirsten","Tommy","Ralphie");
-$i = 0;
-while($i < sizeof($family)){
-  echo $family[$i]." Percival, ";
-  $i++;
-}
+// $i = 0;
+// while($i < 10){
+//   echo $i."<br>";
+//   $i++;
+// }
+// $family = array("Rob","Kirsten","Tommy","Ralphie");
+// $i = 0;
+// while($i < sizeof($family)){
+//   echo $family[$i]." Percival, ";
+//   $i++;
+// }
 
+// http://localhost/phpstudy/1-index.php?name=rob&gender=sam
+// print_r($_GET);
+echo "こんにちは、".$_GET['name']."さん";
 ?>
+<p>お名前を入力してください：</p>
+<form>
+  <input type="text" name="name">
+  <input type="submit" value="返信する">
+</form>
