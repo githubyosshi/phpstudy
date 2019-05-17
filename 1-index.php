@@ -50,17 +50,44 @@
 // print_r($thirdArray);
 // echo sizeof($thirdArray);
 
-$role = "admin";
 // $role = "guest";
 // $position = "director";
-$position = "manager";
-
 // if($role == "admin"){
 // if($role == "admin" && $position == "director"){
-if($role == "admin" || $position == "director"){
-  echo "<p>管理画面に進んでください。</p>";
-} else {
-    echo "<p>あなたは管理者ではないので、ここから先には進めません。</p>";
+
+// $role = "admin";
+// $position = "manager";
+// if($role == "admin" || $position == "director"){
+//   echo "<p>管理画面に進んでください。</p>";
+// } else {
+//     echo "<p>あなたは管理者ではないので、ここから先には進めません。</p>";
+// }
+
+// for($i = 0;$i < 10;$i++){
+//   echo $i."<br>";
+// }
+
+for($i = 2;$i <= 30;$i++){
+  echo $i.",";
+}
+echo "<br><br>";
+for($i = 10;$i >= 0;$i--){
+  if ($i == 0){
+    echo $i;
+  } else {
+    echo $i.",";
+  }
+}
+echo "<br><br>";
+$family = array("Rob","Kirsten","Tommy","Ralphie");
+for($i = 0; $i < sizeof($family);$i++){
+  echo $family[$i].",";
+}
+echo "<br><br>";
+foreach($family as $key => $value){
+  // echo $key.":".$value.",";
+  $family[$key] = $value." Percival";
+  echo $family[$key].",";
 }
 
 ?>
